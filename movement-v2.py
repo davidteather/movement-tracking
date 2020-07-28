@@ -38,7 +38,7 @@ def get_movement(curr, prev, last_time_update, cmd):
     ox,oy, to = prev_cords
     diffx = xc - ox
     diffy = yc - oy
-    thres_diff = 50
+    thres_diff = 20
     
     thres_diff_t = 1
     if last_time_update + 0.4 > tc:
@@ -64,7 +64,7 @@ def get_movement(curr, prev, last_time_update, cmd):
 faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 # Capturing real time video stream.
-video_capture = cv2.VideoCapture(-1)
+video_capture = cv2.VideoCapture(0)
 
 # get vcap property 
 width  = video_capture.get(3) # float

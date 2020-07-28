@@ -61,7 +61,7 @@ def reset_press_flag(nose_cords, cords,cmd):
 faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 # Capturing real time video stream.
-video_capture = cv2.VideoCapture(-1)
+video_capture = cv2.VideoCapture(0)
 
 # get vcap property 
 width  = video_capture.get(3) # float
